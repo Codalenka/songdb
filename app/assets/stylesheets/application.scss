@@ -2,7 +2,65 @@
 @import "bootstrap";
 
 body {
-  background: #555;
+  background: #bbdfe2;
   font-family: 'Ubuntu', sans-serif;
+  color: #fff;
 }
 
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #555;
+  border-color: transparent;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #000;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #555;
+  border-color: #555;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #bbdfe2;
+  border-color: #bbdfe2;
+
+  .btn-link {
+    color: #bbdfe2;
+    font-weight: normal;
+    border-radius: 0;
+  }
+}
+
+.btn-primary.focus,
+.btn-primary.focus {
+  color: #ffffff;
+  background-color: #bbdfe2;
+  border-color: #bbdfe2;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-group.open .dropdown-toggle.btn-success {
+  background-color: #9ebdc0;
+  border-color: #9ebdc0;
+}
+
+.panel-default > .panel-heading {
+  color: #ffffff;
+  background-color: #f5f5f5;
+  border-color: transparent;
+}
+
+
+.text-primary {
+  color: #9ebdc0;
+}

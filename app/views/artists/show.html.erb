@@ -1,11 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="col-md-7 col-md-offset-3">
 
-<p id="notice"><%= notice %></p>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h2><%= @artist.name %></h2>
+  <div class="col-md-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+   <center><h1><%= @artist.name %></h1></center>
   </div class="panel-heading">
 
-    <div class="panel-body">
+    <center><div class="panel-body">
 
       <p><%= image_tag @artist.image %></p>
       <h4>Biography</h4>
@@ -17,28 +20,31 @@
       <% if @artist.songs.any? %>
         <ul>
           <% @artist.songs.each do |song| %>
-           <li><%= song.name %></li>
+              <!-- This `id` attribute will help us find the correct element to remove using jQuery -->
+              <li id="<%= song.id %>">
+              <%= song.name %><br>
+
+              <%= link_to "delete", song_path(song), method: 'delete', remote: true %>
           <% end %>
         </ul>
        <% else %>
       <p>There are no songs for this artist.</p>
       <% end %>
 
-      <%= form_for Song.new do |f| %>
+      <%= form_for Song.new, remote: true do |f| %>
           <div class="form-group">
-            <%= f.text_field :name, placeholder: "Add a song" %>
+            <%= f.text_field :name, placeholder: "Add a song"%>
           </div>
           <div class="form-group">
             <%= f.label :artist_id %>
             <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
           </div>
           <div class="form-group">
-            <%= f.submit %>
+            <%= f.submit "Add Song", class: "btn btn-default" %>
           </div>
       <% end %>
-
-       <%= link_to "Delete all Songs", new_song_path, class: "btn btn-default" %>
+      <%= link_to "delete all", song_path(@artist.songs), method: 'destroy_all', remote: true, class: "btn btn-default" %>
       <%= link_to "Back", root_path, class: "btn btn-default" %>
-      </div class="panel-body">
+      </div class="panel-body"></center>
     </div>
   </div>

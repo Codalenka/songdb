@@ -55,3 +55,6 @@ gem 'rails_12factor', group: :production
 # Image and uploader
 gem 'carrierwave'
 gem 'cloudinary'
+
+# gem pry for binding
+gem 'pry'
