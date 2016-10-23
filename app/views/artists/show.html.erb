@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1><%= @artist.name %></h1>
+
+<p><%= image_tag @artist.image  %></p>
+<p>Biography <%= @artist.bio %></p>
+
+<h4>List of Songs</h4>
+
+<% if @artist.songs.any? %>
+    <ul>
+      <% @artist.songs.each do |song| %>
+          <li><%= song.name %></li>
+      <% end %>
+    </ul>
+<% else %>
+    <p>There are no songs for this artist.</p>
+<% end %>
