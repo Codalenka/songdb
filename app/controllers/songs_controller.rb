@@ -6,21 +6,14 @@ class SongsController < ApplicationController
 
 
   def create
-    @song = Song.new( song_params )
-
-    if @song.save
-      redirect_to artist_path
-    else
-      render 'new'
+    Song.create( song_params )
+      redirect_to root_path
     end
-  end
 
   def destroy
     @song = Song.find(params[:id])
-
     @song.destroy
-
-    redirect_to @artist.song
+    redirect_to root_path
   end
 
   private
@@ -28,7 +21,6 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:name, :artist_id)
   end
-
 end
 
 
