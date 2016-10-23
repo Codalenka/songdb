@@ -1,0 +1,5 @@
+var html = "<li><%= @song.name %><%= escape_javascript link_to 'delete', song_path(@song), method: 'delete' %></li>";
+
+$('ul').append(html);
+
+

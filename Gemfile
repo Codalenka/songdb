@@ -9,9 +9,9 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
+# Use SCSS for stylesheets and bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -55,3 +55,6 @@ gem 'rails_12factor', group: :production
 # Image and uploader
 gem 'carrierwave'
 gem 'cloudinary'
+
+# gem pry for binding
+gem 'pry'
