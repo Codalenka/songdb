@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2><%= @artist.name %></h2>
+  </div class="panel-heading">
 
+    <div class="panel-body">
 
-<h1><%= @artist.name %></h1>
+      <p><%= image_tag @artist.image %></p>
+      <h4>Biography</h4>
+      <br>
+      <%= @artist.bio %>
+      <br><br>
+      <h4>List of Songs</h4>
 
-<p><%= image_tag @artist.image  %></p>
-<p>Biography <%= @artist.bio %></p>
-
-<h4>List of Songs</h4>
-
-<% if @artist.songs.any? %>
-    <ul>
-      <% @artist.songs.each do |song| %>
-          <li><%= song.name %></li>
+      <% if @artist.songs.any? %>
+        <ul>
+          <% @artist.songs.each do |song| %>
+           <li><%= song.name %></li>
+          <% end %>
+        </ul>
+       <% else %>
+      <p>There are no songs for this artist.</p>
       <% end %>
-    </ul>
-<% else %>
-    <p>There are no songs for this artist.</p>
-<% end %>
+
+       <%= link_to "New Song", new_song_path, class: "btn btn-default" %>
+       <%= link_to "Delete all Songs", new_song_path, class: "btn btn-default" %>
+      <%= link_to "Back", root_path, class: "btn btn-default" %>
+      </div class="panel-body">
+    </div>
+  </div>
