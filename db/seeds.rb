@@ -1,3 +1,6 @@
+Song.delete_all
+Artist.delete_all
+
 song1 = Song.create(name: "Hello")
 song2 = Song.create(name: "When we were Young")
 song3 = Song.create(name: "Sweetest Devotion")
