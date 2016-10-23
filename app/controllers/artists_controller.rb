@@ -2,7 +2,10 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
-  end
+      render status: 200, json: {
+          artists: Artist.all
+      }.to_json
+    end
 
 
   def show
