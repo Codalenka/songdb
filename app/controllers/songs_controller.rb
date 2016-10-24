@@ -27,6 +27,7 @@ class SongsController < ApplicationController
       format.js { }
     end
   end
+  
 
   def destroy_all
     @songs = Songs.all

@@ -10,15 +10,15 @@
 
     <center><div class="panel-body">
 
-      <p><%= image_tag @artist.image %></p>
-      <h4>Biography</h4>
-      <br>
-      <%= @artist.bio %>
-      <br><br>
-      <h4>List of Songs</h4>
+      <p><%= image_tag @artist.image, class: "img-responsive", :size => '300x300'  %></p>
+        <h4>Biography</h4>
+         <br>
+           <%= @artist.bio %>
+        <br><br>
+           <h4>List of Songs</h4>
 
       <% if @artist.songs.any? %>
-        <ul>
+        <ul class="list-unstyled"><center>
           <% @artist.songs.each do |song| %>
               <!-- This `id` attribute will help us find the correct element to remove using jQuery -->
               <li id="<%= song.id %>">
@@ -26,23 +26,22 @@
 
               <%= link_to "delete", song_path(song), method: 'delete', remote: true %>
           <% end %>
-        </ul>
+        </ul></center>
        <% else %>
       <p>There are no songs for this artist.</p>
       <% end %>
-
+      <div class="text-center">
       <%= form_for Song.new, remote: true do |f| %>
           <div class="form-group">
             <%= f.text_field :name, placeholder: "Add a song"%>
           </div>
           <div class="form-group">
-            <%= f.label :artist_id %>
             <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
           </div>
           <div class="form-group">
             <%= f.submit "Add Song", class: "btn btn-default" %>
-          </div>
       <% end %>
+        </div>
       <%= link_to "delete all", song_path(@artist.songs), method: 'destroy_all', remote: true, class: "btn btn-default" %>
       <%= link_to "Back", root_path, class: "btn btn-default" %>
       </div class="panel-body"></center>
