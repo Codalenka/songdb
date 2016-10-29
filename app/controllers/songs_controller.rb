@@ -27,16 +27,17 @@ class SongsController < ApplicationController
       format.js { }
     end
   end
-  
 
-  def destroy_all
-    @songs = Songs.all
-    @songs.destroy
 
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.js { }
+
+
+  def delete_all_songs
+    @artist = Artist.find(params[:id])
+    @songs = @artist.songs
+    @songs.each do |a|
+      a.destroy
     end
+     redirect_to root_path, notice: "All songs succesfully deleted"
   end
 
   private

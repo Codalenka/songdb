@@ -40,10 +40,13 @@
           </div>
           <div class="form-group">
             <%= f.submit "Add Song", class: "btn btn-default" %>
-      <% end %>
-        </div>
-      <%= link_to "delete all", song_path(@artist.songs), method: 'destroy_all', remote: true, class: "btn btn-default" %>
+           <% end %>
+          </div>
+            <td><%= link_to "Remove all songs", delete_all_songs_songs_path(id: @artist.id), :action => 'delete_all_songs', class: 'codaisseur-link', data: {confirm: "This will remove all the songs for this artist. Are you Sure?"} %></td>
+      </div>
+
+
+
       <%= link_to "Back", root_path, class: "btn btn-default" %>
-      </div class="panel-body"></center>
-    </div>
+      </div class="panel-body"></center></div>
   </div>

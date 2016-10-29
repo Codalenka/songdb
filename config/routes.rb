@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root "artists#index"
 
 
-    resources :artists, only: [:show]
-    resources :songs
+    resources :artists
+
+    resources :songs do
+  collection do
+    get 'delete_all_songs'
+  end
+end
 end
