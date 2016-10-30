@@ -1,0 +1,17 @@
+<div class="songs-form">
+
+<%= form_for Song.new, remote: true do |f| %>
+    <div class="form-group">
+      <%= f.text_field :name, placeholder: "Add a song", id: "song_input" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.hidden_field(:artist_id, value: @artist.id) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Add Song", class: "btn btn-default" %>
+    </div>
+  <% end %>
+
+</div>

@@ -28,15 +28,22 @@ class SongsController < ApplicationController
     end
   end
 
-  def destroy_all
-    @songs = Songs.all
-    @songs.destroy
+
+
+  def delete_all_songs
+    @artist = Artist.find(params[:id])
+    @songs = @artist.songs
+    @songs.each do |a|
+      a.destroy
+    end
 
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { }
     end
   end
+
+
 
   private
 
