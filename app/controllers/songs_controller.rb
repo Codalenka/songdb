@@ -30,15 +30,20 @@ class SongsController < ApplicationController
 
 
 
-
   def delete_all_songs
     @artist = Artist.find(params[:id])
     @songs = @artist.songs
     @songs.each do |a|
       a.destroy
     end
-     redirect_to root_path, notice: "All songs succesfully deleted"
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { }
+    end
   end
+
+
 
   private
 

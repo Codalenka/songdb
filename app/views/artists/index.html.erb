@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<div class="col-md-7 col-md-offset-3">
+  <div class="col-md-7 col-md-offset-3">
+    <div class="col-md-9">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3>Artists</h3>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li> <%= link_to "Name", :sort => "name" %></li>
+              <li><%= link_to "Added on", :sort => "created_at" %></li>
+            </ul>
+          </div>
+        </div>
+          <div class="panel-body">
 
-<div class="col-md-9">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3><center>Artists</center></h3>
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
-          <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li> <%= link_to "Name", :sort => "name" %></li>
-          <li><%= link_to "Added on", :sort => "created_at" %></li>
-        </ul>
+            <% @artists.each do |artist| %>
+                <div class="img-thumbnail"><%= image_tag artist.image, class: "img-responsive", :size => '250x250' %></div><br>
+                <h4><%= link_to artist.name, artist_path(artist.id), class: "btn btn-default" %></h4><br>
+            <% end %>
+          </div>
       </div>
-  </div>
-    <center><div class="panel-body">
-          <% @artists.each do |artist| %>
-              <div class="img-thumbnail"><%= image_tag artist.image, class: "img-responsive", :size => '250x250' %></div><br>
-              <h4><%= link_to artist.name, artist_path(artist.id), class: "btn btn-default" %></h4><br>
-
-          <% end %>
-          </div></center>
-       </div>
-     </div>
+    </div>
   </div>
 </html>

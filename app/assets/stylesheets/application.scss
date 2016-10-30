@@ -1,16 +1,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
 body {
   background: #bbdfe2;
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
 
+
+.panel-body{
+  width: 90%;
+  margin: 0 auto;
+  text-align:center;
+}
+
 .panel-primary > .panel-heading {
   color: #ffffff;
   background-color: #555;
   border-color: transparent;
+  text-align:center;
 }
 
 .panel {

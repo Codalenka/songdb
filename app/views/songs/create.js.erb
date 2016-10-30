@@ -1,4 +1,4 @@
-var html = "<li><%= @song.name %><br><%= escape_javascript link_to 'delete', song_path(@song), method: 'delete' %></li>";
-
+var html = "<li><%= @song.name %><br><%= escape_javascript link_to 'delete', song_path(@song), method: 'delete', remote: true %></li>";
+$('#song_input').val('');
 $('ul').append(html);
 
