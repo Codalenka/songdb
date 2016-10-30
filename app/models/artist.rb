@@ -6,5 +6,9 @@ class Artist < ApplicationRecord
       order(:name)
     end
 
+    def self.order_by_created_at
+      order(:created_at)
+    end
+
   mount_uploader :image, ImageUploader
 end

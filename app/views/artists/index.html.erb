@@ -9,8 +9,10 @@
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
               <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li> <%= link_to "Name", :sort => "name" %></li>
-              <li><%= link_to "Added on", :sort => "created_at" %></li>
+              <li> <%= link_to "Name", order_by_name_artists_path %></li>
+              <li><%= link_to "Added on", order_by_created_at_artists_path %></li>
+              <!--<li> <%#= link_to "Name", :sort => "name" %></li>-->
+              <!--<li><%#= link_to "Added on", :sort => "created_at" %></li>-->
             </ul>
           </div>
         </div>

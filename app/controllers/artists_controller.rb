@@ -9,6 +9,18 @@ class ArtistsController < ApplicationController
     def show
       @artist = Artist.find(params[:id])
       @songs = @artist.songs
+    end
+
+
+    def order_by_name
+      @artists = Artist.order_by_name
+      render action: :index
+    end
+
+    def order_by_created_at
+      @artists = Artist.order_by_created_at
+      render action: :index
+
+    end
   end
-end
 
