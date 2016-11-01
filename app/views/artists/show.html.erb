@@ -19,7 +19,7 @@
 
               <ul class="list-unstyled">
                 <% @artist.songs.each do |song| %>
-                    <!-- This `id` attribute will help us find the correct element to remove using jQuery -->
+                    <!--'id' will help find the correct element you want to remove.-->
                     <li id="<%= song.id %>">
                       <%= song.name %><br>
                       <%= link_to "delete", song_path(song), method: 'delete', remote: true %>

@@ -1,4 +1,8 @@
+// Remote true points to the create.js.erb file.
 var html = "<li><%= @song.name %><br><%= escape_javascript link_to 'delete', song_path(@song), method: 'delete', remote: true %></li>";
-$('#song_input').val('');
-$('ul').append(html);
 
+// Makes sure field is empty after submitting.
+$('#song_input').val('');
+
+// Tells the new song where to appear on the page.
+$('ul').append(html);
