@@ -20,7 +20,7 @@
 
             <% @artists.each do |artist| %>
                 <div class="img-thumbnail"><%= image_tag artist.image, class: "img-responsive", :size => '250x250' %></div><br>
-                <h4><%= link_to artist.name, artist_path(artist.id), class: "btn btn-default" %></h4><br>
+                <h4><%= link_to artist.name, artist_path(artist.id), class: "btn btn-default", id: "artist_link" %></h4><br>
             <% end %>
           </div>
       </div>

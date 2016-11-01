@@ -18,7 +18,6 @@ class SongsController < ApplicationController
 
 
   def destroy
-    # we need an instance variable @song so we can access it in the next step.
     @song = Song.find(params[:id])
     @song.destroy
 
