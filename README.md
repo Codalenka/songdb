@@ -1,27 +1,24 @@
-# README
+# SONGDB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---------
 
-Things you may want to cover:
+Codaisseur homework assignment. A database with artists and their songs.
 
-* Ruby version
+---------
 
-* System dependencies
+## Running Locally
 
-* Configuration
+Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed.
 
-* Database creation
+```bash
+git clone git@github.com:MalenkavanOmmen/songdb.git
+cd songdb
+bundle install
+rake db:create db:migrate db:seed
+rails server
+```
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 <!--
 
