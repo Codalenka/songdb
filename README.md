@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+[![](https://github.com/MalenkavanOmmen/songdb/blob/master/app/assets/images/Screenshot%20from%202016-11-20%2021-21-28.png?raw=true "Home")
+
+[![](https://github.com/MalenkavanOmmen/songdb/blob/master/app/assets/images/Screenshot%20from%202016-11-20%2021-27-36.png?raw=true "Showpage")
