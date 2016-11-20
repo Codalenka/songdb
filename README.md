@@ -1,10 +1,9 @@
 # SONGDB
 
----------
+
 
 Codaisseur homework assignment. A database with artists and their songs.
 
----------
 
 ## Running Locally
 
