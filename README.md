@@ -23,8 +23,13 @@ Things you may want to cover:
 
 * ...
 
-
+<!--
 
 [![](https://github.com/MalenkavanOmmen/songdb/blob/master/app/assets/images/Screenshot%20from%202016-11-20%2021-21-28.png?raw=true "Home")
 
-[![](https://github.com/MalenkavanOmmen/songdb/blob/master/app/assets/images/Screenshot%20from%202016-11-20%2021-27-36.png?raw=true "Showpage")
+
+
+
+![alt text](screenshots/filename.png "Description goes here")
+
+![alt tag](http://domain.com/path/to/img.png "Description goes here") -->
