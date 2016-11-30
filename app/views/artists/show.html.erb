@@ -6,37 +6,37 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1><%= @artist.name %></h1>
-      </div class="panel-heading">
-        <div class="panel-body">
+      </div>
+      <div class="panel-body">
 
-          <p><%= image_tag @artist.image, class: "img-responsive", size: '300x300', class: "centerImage"  %></p>
-          <br>
-            <h4>Biography</h4>
-          <br>
-           <%= @artist.bio %>
-          <br><br>
-           <h4>List of Songs</h4>
+        <p><%= image_tag @artist.image, class: "img-responsive", size: '300x300', class: "centerImage"  %></p>
+        <br>
+        <h4>Biography</h4>
+        <br>
+         <%= @artist.bio %>
+        <br><br>
+         <h4>List of Songs</h4>
 
-              <ul class="list-unstyled">
-                <% @artist.songs.each do |song| %>
-                    <!--'id' will help find the correct element you want to remove.-->
-                    <li id="<%= song.id %>">
-                      <%= song.name %><br>
-                      <%= link_to "delete", song_path(song), method: 'delete', remote: true %>
-                    </li>
-                <% end %>
-              </ul>
+          <ul class="list-unstyled">
+            <% @artist.songs.each do |song| %>
+                <!--'id' will help find the correct element you want to remove.-->
+                <li id="<%= song.id %>">
+                  <%= song.name %><br>
+                  <%= link_to "delete", song_path(song), method: 'delete', remote: true %>
+                </li>
+            <% end %>
+          </ul>
 
-            <div>
-             <%= render 'songs/form' %>
-            </div>
-          <div>
-            <%= link_to "Remove all songs", delete_all_songs_songs_path(id: @artist.id), action:'delete_all_songs', class: "btn btn-default", data: {confirm: "This will remove all the songs for this artist. Are you Sure?", remote: true, } %>
-          </div><br>
-          <div>
-            <%= link_to "Back", root_path, class: "btn btn-default" %>
-          </div>
+        <div>
+         <%= render 'songs/form' %>
         </div>
+        <div>
+          <%= link_to "Remove all songs", delete_all_songs_songs_path(id: @artist.id), action:'delete_all_songs', class: "btn btn-default", data: {confirm: "This will remove all the songs for this artist. Are you Sure?", remote: true, } %>
+        </div><br>
+        <div>
+          <%= link_to "Back", root_path, class: "btn btn-default" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
