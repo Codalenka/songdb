@@ -4,6 +4,9 @@
 
 Codaisseur homework assignment. A database with artists and their songs.
 
+![screenshot_from_2016-11-20_21-21-28_s3plnn](https://cloud.githubusercontent.com/assets/22615915/20764463/94a4210a-b72e-11e6-8be6-cae0677e3413.png)
+
+
 
 ## Running Locally
 
@@ -18,14 +21,3 @@ rails server
 ```
 
 
-
-<!--
-
-[![](https://github.com/MalenkavanOmmen/songdb/blob/master/app/assets/images/Screenshot%20from%202016-11-20%2021-21-28.png?raw=true "Home")
-
-
-
-
-![alt text](screenshots/filename.png "Description goes here")
-
-![alt tag](http://domain.com/path/to/img.png "Description goes here") -->
